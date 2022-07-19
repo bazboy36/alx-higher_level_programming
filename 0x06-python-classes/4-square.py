@@ -1,20 +1,40 @@
 #!/usr/bin/python3
-"""Defines a square-printing function."""
+""" class Square that defines a square"""
 
 
-def print_square(size):
-    """Print a square with the # character.
-    Args:
-        size (int): The height/width of the square.
-    Raises:
-        TypeError: If size is not an integer.
-        ValueError: If size is < 0
-    """
-    if not isinstance(size, int):
-        raise TypeError("size must be an integer")
-    if size < 0:
-        raise ValueError("size must be >= 0")
+class Square:
+    """ class Square that defines a square"""
+    def __init__(self, size=0):
+        """ init square
+        Args:
+            value (int): size of the square.
+        """
+        self.size = size
 
-    for i in range(size):
-        [print("#", end="") for j in range(size)]
-        print("")
+    @property
+    def size(self):
+        """int: private size.
+        Returns:
+            Private size.
+        """
+        return self.__size
+
+    @size.setter
+    def size(self, value):
+        """Sets value into size, must be int.
+        Args:
+            value (int): size of the square.
+        """
+        if type(value) is not int:
+            raise TypeError('size must be an integer')
+        elif value < 0:
+            raise ValueError('size must be >= 0')
+        else:
+            self.__size = value  #: size of the square
+
+    def area(self):
+        """returns the area
+        Returns:
+            area.
+        """
+        return self.__size**2

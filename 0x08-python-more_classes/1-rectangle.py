@@ -1,51 +1,49 @@
 #!/usr/bin/python3
-"""Module 1-rectangle
-Defines a Rectangle class.
+"""
+Defining two attributes for a class.
 """
 
 
 class Rectangle:
-    """Rectangle class defined by width and height."""
+    """
+    Class that defines a rectangle.
+    Attributes:
+        width(int): width of a rectangle - private attribute.
+        height(int): height of a rectangle - private attribute.
+    """
 
     def __init__(self, width=0, height=0):
-        """Initializes a Rectangle instance.
-        Args:
-            width: width of the rectangle
-            height: height of the rectangle
-        """
         self.width = width
         self.height = height
 
     @property
     def width(self):
-        """Retrieves the width of a Rectangle instance."""
+        """Property that retrieves width"""
         return self.__width
-
-    @width.setter
-    def width(self, value):
-        """Sets the width of a Rectangle instance
-        Args:
-            value: value of the width, must be a positive integer
-        """
-        if not isinstance(value, int):
-            raise TypeError("width must be an integer")
-        if value < 0:
-            raise ValueError("width must be >= 0")
-        self.__width = value
 
     @property
     def height(self):
-        """Retrieves the height of a Rectangle instance."""
+        """Property that retrieves height"""
         return self.__height
+
+    @width.setter
+    def width(self, value):
+        """Property setter that sets the value of width"""
+        if isinstance(value, int):
+            if value < 0:
+                raise ValueError("width must be >= 0")
+            else:
+                self.__width = value
+        else:
+            raise TypeError("width must be an integer")
 
     @height.setter
     def height(self, value):
-        """Sets the height of a Rectangle instance
-        Args:
-            value: value of the height, must be a positive integer
-        """
-        if not isinstance(value, int):
+        """Property setter that sets the value of height"""
+        if isinstance(value, int):
+            if value < 0:
+                raise ValueError("height must be >= 0")
+            else:
+                self.__height = value
+        else:
             raise TypeError("height must be an integer")
-        if value < 0:
-            raise ValueError("height must be >= 0")
-        self.__height =value 

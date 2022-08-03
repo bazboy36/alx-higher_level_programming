@@ -13,7 +13,7 @@ This project is about how to read/write files and working with json files in pyt
 |4-from_json_string.py |	Function that returns an object (Python data structure) represented by a JSON string: Prototype: def from_json_string(my_str): |
 |5-save_to_json_file.py	|Function that writes an Object to a text file, using a JSON representation: Prototype: def save_to_json_file(my_obj, filename): |
 |6-load_from_json_file.py |	Function that creates an Object from a “JSON file”: Prototype: def load_from_json_file(filename) |
-|7-add_item.py	A script that adds all arguments to a Python list, and then save them to a file: |
+|7-add_item.py |	A script that adds all arguments to a Python list, and then save them to a file: |
 |8-class_to_json.py |	Function that returns the dictionary description with simple data structure (list, dictionary, string, integer and boolean) for JSON serialization of an object: Prototype: def class_to_json(obj): |
 |9-student.py |	A class Student that defines a student by: Instantiation with first_name, last_name and age: def init(self, first_name, last_name, age): |
 |10-student.py |	A class Student that defines a student by: (based on 9-student.py) Instantiation with first_name, last_name and age: def init(self, first_name, last_name, age): |
